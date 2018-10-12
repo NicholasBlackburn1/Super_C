@@ -25,8 +25,9 @@
   0x7c, 0x20, 0x20, 0x20, 0x20, 0x0a
 };
 unsigned int asciipic_txt_len = 246;
-int logo(); int mem(); void malloc();
-
+// definging funtion 
+int logo(); int mem(); int malloc(); int free();
+// main funtion 
 int main(void)
 {
     logo();
@@ -38,27 +39,32 @@ int main(void)
 int logo ()
 {
 printf("%s\n", asciipic_txt);
+
 return 0;
 }
 // Mem read and right 
 int mem()
 {
- int i,n;
-  char * buffer;
+ int * userInputBuffer = malloc(sizeof(int) * BUFFER_SIZE);
+    int userInput;
+    int counter = 0;
+    int reallocCounter = 1;
 
-  printf ("How long do you want the string? ");
-  scanf ("%d", &i);
+    while ((scanf(" %d", &userInput)) == 1)
+    {
+        if ((counter % BUFFER_SIZE) == 0)
+        {
+            userInputBuffer = realloc(userInputBuffer, (reallocCounter++ + 1) * BUFFER_SIZE * sizeof(int));
+        }
+        userInputBuffer[counter++] = userInput;
+    }
 
-  buffer = (char*) malloc (i+1);
-  if (buffer==NULL) exit (1);
+    for (int i = 0; i < counter; i++)
+    {
+        printf("User input #%d: %d\n", i + 1, userInputBuffer[i]);
+    }
 
-  for (n=0; n<i; n++)
-    buffer[n]=rand()%26+'a';
-  buffer[i]='\0';
-
-  printf ("Random string: %s\n",buffer);
-  free (buffer);
-
-  return 0;
+    free(userInputBuffer);
+    return 0;
 }
 }
