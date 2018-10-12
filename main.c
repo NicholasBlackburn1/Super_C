@@ -29,6 +29,21 @@ unsigned int asciipic_txt_len = 246;
 
 int main(void)
 {
-printf("%s\n", asciipic_txt);
+
     return 0;
+}
+
+int logo ()
+{
+printf("%s\n", asciipic_txt);
+return 0;
+}
+// Mem read and right 
+int mem()
+{
+ char *str;
+    str = (char *) malloc(15);
+   strcpy(str, "tutorialspoint");
+   printf("String = %s,  Address = %u\n", str, str);
+   return 0; 
 }
