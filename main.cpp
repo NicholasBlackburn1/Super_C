@@ -30,21 +30,30 @@ using namespace std;
 };
 unsigned int asciipic_txt_len = 246;
 // declared funtions 
-void mem();
+void mem(); void text();
 
 //main funtion
 int main()
 {
     mem();
+    text();
     return 0; 
 }
 
 void mem()
 {
-cout<<("\n");
-
+// added color for logo
   Color::Modifier blue(Color::FG_BLUE);
     Color::Modifier def(Color::FG_DEFAULT);
     cout << blue << asciipic_txt << def << endl;
+    // adds space 
+    cout<<("\n");
 
 }
+void text()
+    {
+        Color::Modifier green(Color::FG_GREEN);
+    Color::Modifier def(Color::FG_DEFAULT);
+     
+     cout<< green <<"Hello_World"<<def << endl;
+    }
