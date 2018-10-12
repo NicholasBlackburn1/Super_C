@@ -1,7 +1,6 @@
 
 #include <stdio.h>
-#include <stdlib.h>
-#define BUFFER_SIZE 50
+
     unsigned char asciipic_txt[] = {
   0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x20, 0x20, 0x5f, 0x20, 0x20, 0x20, 0x5f,
   0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x20, 0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x5f,
@@ -26,13 +25,8 @@
   0x7c, 0x20, 0x20, 0x20, 0x20, 0x0a
 };
 unsigned int asciipic_txt_len = 246;
-// definging funtion 
-int logo(); int mem();  int * userInputBuffer;
-    int userInput;
-    int counter = 0;
-    int reallocCounter = 1;
+int logo(); int mem(); 
 
-// main funtion 
 int main(void)
 {
     logo();
@@ -50,25 +44,5 @@ return 0;
 // Mem read and right 
 int mem()
 {
-    userInputBuffer = malloc(sizeof(int) * BUFFER_SIZE);
-
-    int counter = 0;
-    int reallocCounter = 1;
-
-    while ((scanf(" %d", &userInput)) == 1)
-    {
-        if ((counter % BUFFER_SIZE) == 0)
-        {
-            userInputBuffer = realloc(userInputBuffer, (reallocCounter++ + 1) * BUFFER_SIZE * sizeof(int));
-        }
-        userInputBuffer[counter++] = userInput;
-    }
-
-    for (int i = 0; i < counter; i++)
-    {
-        printf("User input #%d: %d\n", i + 1, userInputBuffer[i]);
-    }
-
-    free(userInputBuffer);
-    return 0;
+ 
 }

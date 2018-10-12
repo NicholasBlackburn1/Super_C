@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <iostream>
+#include "colormod.h"
 using namespace std;
 
     unsigned char asciipic_txt[] = {
@@ -33,12 +35,16 @@ void mem();
 //main funtion
 int main()
 {
-    cout<<(asciipic_txt);
     mem();
     return 0; 
 }
 
 void mem()
 {
+cout<<("\n");
+
+  Color::Modifier blue(Color::FG_BLUE);
+    Color::Modifier def(Color::FG_DEFAULT);
+    cout << blue << asciipic_txt << def << endl;
 
 }
