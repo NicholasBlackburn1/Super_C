@@ -25,7 +25,7 @@
   0x7c, 0x20, 0x20, 0x20, 0x20, 0x0a
 };
 unsigned int asciipic_txt_len = 246;
-int logo(); int mem();
+int logo(); int mem(); void malloc();
 
 int main(void)
 {
@@ -43,9 +43,22 @@ return 0;
 // Mem read and right 
 int mem()
 {
- char *str;
-    str = (char *) malloc(15);
-   strcpy(str, "tutorialspoint");
-   printf("String = %s,  Address = %u\n", str, str);
-   return 0; 
+ int i,n;
+  char * buffer;
+
+  printf ("How long do you want the string? ");
+  scanf ("%d", &i);
+
+  buffer = (char*) malloc (i+1);
+  if (buffer==NULL) exit (1);
+
+  for (n=0; n<i; n++)
+    buffer[n]=rand()%26+'a';
+  buffer[i]='\0';
+
+  printf ("Random string: %s\n",buffer);
+  free (buffer);
+
+  return 0;
+}
 }
