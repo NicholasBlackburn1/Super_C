@@ -25,12 +25,14 @@
   0x7c, 0x20, 0x20, 0x20, 0x20, 0x0a
 };
 unsigned int asciipic_txt_len = 246;
-
+int logo(); int mem();
 
 int main(void)
 {
+    logo();
 
     return 0;
+	
 }
 
 int logo ()

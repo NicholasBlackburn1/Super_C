@@ -27,10 +27,18 @@ using namespace std;
   0x7c, 0x20, 0x20, 0x20, 0x20, 0x0a
 };
 unsigned int asciipic_txt_len = 246;
+// declared funtions 
+void mem();
 
+//main funtion
 int main()
 {
     cout<<(asciipic_txt);
+    mem();
+    return 0; 
 }
 
+void mem()
+{
 
+}
