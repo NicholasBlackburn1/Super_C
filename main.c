@@ -1,6 +1,7 @@
 
 #include <stdio.h>
-
+#include <stdlib.h>
+#define BUFFER_SIZE 50
     unsigned char asciipic_txt[] = {
   0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x20, 0x20, 0x5f, 0x20, 0x20, 0x20, 0x5f,
   0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x20, 0x20, 0x5f, 0x5f, 0x5f, 0x5f, 0x5f,
@@ -26,7 +27,11 @@
 };
 unsigned int asciipic_txt_len = 246;
 // definging funtion 
-int logo(); int mem(); int malloc(); int free();
+int logo(); int mem();  int * userInputBuffer;
+    int userInput;
+    int counter = 0;
+    int reallocCounter = 1;
+
 // main funtion 
 int main(void)
 {
@@ -45,8 +50,8 @@ return 0;
 // Mem read and right 
 int mem()
 {
- int * userInputBuffer = malloc(sizeof(int) * BUFFER_SIZE);
-    int userInput;
+    userInputBuffer = malloc(sizeof(int) * BUFFER_SIZE);
+
     int counter = 0;
     int reallocCounter = 1;
 
@@ -66,5 +71,4 @@ int mem()
 
     free(userInputBuffer);
     return 0;
-}
 }
