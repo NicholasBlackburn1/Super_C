@@ -30,7 +30,7 @@ unsigned int asciipic_txt_len = 246;
 
 int main()
 {
-    cout<<(asciipic_txt_len);
+    cout<<(asciipic_txt);
 }
 
 
