@@ -44,5 +44,5 @@ return 0;
 // Mem read and right 
 int mem()
 {
- 
+ __attribute_malloc__
 }

@@ -30,13 +30,14 @@ using namespace std;
 };
 unsigned int asciipic_txt_len = 246;
 // declared funtions 
-void mem(); void text();
+void mem(); void text(); void commands();
 
 //main funtion
 int main()
 {
     mem();
     text();
+    commands();
     return 0; 
 }
 
@@ -51,9 +52,19 @@ void mem()
 
 }
 void text()
-    {
+    {  
+        // added text color
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
-     
      cout<< green <<"Welcome to the FBI\n"<<def << endl;
+     //added lines 
+     Color::Modifier red(Color::FG_RED);
+    cout << red << "Here are your options" << def << endl;
+
+
+
     }
+void commands()
+{
+
+}
