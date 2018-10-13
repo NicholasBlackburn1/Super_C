@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string>
+#include <sstream>
 #include <stdlib.h>
 #include <unistd.h>
 #include <iostream>
@@ -30,14 +32,13 @@ using namespace std;
 };
 unsigned int asciipic_txt_len = 246;
 // declared funtions 
-void mem(); void text(); void commands();
+void mem(); void text(); void commands(); void test();
 
 //main funtion
 int main()
 {
     mem();
     text();
-    commands();
     return 0; 
 }
 
@@ -56,15 +57,21 @@ void text()
         // added text color
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
-     cout<< green <<"Welcome to the FBI\n"<<def << endl;
-     //added lines 
-     Color::Modifier red(Color::FG_RED);
-    cout << red << "Here are your options" << def << endl;
+     cout<< green <<"Welcome to Super_C\n"<<def << endl;
+      commands();
 
 
 
     }
 void commands()
 {
+std::ostringstream oss;
+    oss << "sometext" << test << "sometext" << endl;
+    std::string var = oss.str();
 
+}
+
+void test()
+{
+    system("htop");
 }
