@@ -55,5 +55,5 @@ void text()
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
      
-     cout<< green <<"Hello_World"<<def << endl;
+     cout<< green <<"Welcome to the FBI\n"<<def << endl;
     }
