@@ -59,6 +59,7 @@ void text()
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
      cout<< green <<"Welcome to Super_C\n"<<def << endl;
+     
       ui();
 
 
@@ -66,11 +67,31 @@ void text()
     }
 void ui()
     {
-        initscr();			/* Start curses mode 		  */
-	    printw("Hello World !!!");	/* Print Hello World		  */
-	    refresh();			/* Print it on to the real screen */
-	    getch();			/* Wait for user input */
-	    endwin();			/* End curses mode		  */
+        cout<< "[1] = htop\n";
+         cout<< "[2] = brew\n";
+        char menuChoice;
+    switch(menuChoice)
+          {
+          case '1':
+               system("htop");
+               break;
+          case '2':
+               system("brew");
+               break;
+          case '3':
+               system("cls");
+               cout << "Option 3 code goes here \n";
+               cout << endl;
+               system("pause");
+               system("cls");
+               break;
+          case '4':
+               system("cls");
+               cout << "Option 4 code goes here \n";
+               cout << endl;
+               system("pause");
+               system("cls");
+               break;
     }
-
+}
     
