@@ -51,7 +51,7 @@ void mem()
     cout << blue << asciipic_txt << def << endl;
     // adds space 
     cout<<("\n");
-     ui();
+     
 }
 void text()
     {  
@@ -59,7 +59,8 @@ void text()
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
      cout<< green <<"Welcome to Super_C\n"<<def << endl;
-     
+      cout<< "[1] = htop\n";
+         cout<< "[2] = brew\n";
       ui();
 
 
@@ -67,9 +68,8 @@ void text()
     }
 void ui()
     {
-        cout<< "[1] = htop\n";
-         cout<< "[2] = brew\n";
         char menuChoice;
+        cin >> menuChoice;
     switch(menuChoice)
           {
           case '1':
@@ -79,11 +79,7 @@ void ui()
                system("brew");
                break;
           case '3':
-               system("cls");
-               cout << "Option 3 code goes here \n";
-               cout << endl;
-               system("pause");
-               system("cls");
+             
                break;
           case '4':
                system("cls");
