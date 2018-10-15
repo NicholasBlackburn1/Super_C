@@ -51,7 +51,7 @@ void mem()
     cout << blue << asciipic_txt << def << endl;
     // adds space 
     cout<<("\n");
-
+     ui();
 }
 void text()
     {  
@@ -66,49 +66,6 @@ void text()
     }
 void ui()
     {
-        char menuChoice;
-        cin >> menuChoice;
-         
-          switch(menuChoice)
-          {
-          case '1':
-               system("cls");
-               cout << "Lauch ui \n";
-               cout << endl;
-               system("pause");
-               system("cls");
-               break;
-          case '2':
-               system("cls");
-               cout << "help menu \n";
-               cout << endl;
-               system("pause");
-               system("cls");
-               break;
-          case '3':
-               system("cls");
-               cout << " version \n";
-               cout << endl;
-               system("pause");
-               system("cls");
-               break;
-          case '4':
-               system("cls");
-               cout << "quit\n";
-               cout << endl;
-               system("pause");
-               system("^C");
-               break;
-          case '5':
-               cout << "\n*THANK YOU HAVE A NICE DAY*\n";
-          default:
-               system("cls");
-               cout << "\n*YOU DID NOT ENTER A VALID MENU OPTION. PLEASE TRY AGAIN* \n \n";
-               cout << endl;
-               system("pause");
-               system("cls");
-               break;
-
     }
 
-    }
+    
