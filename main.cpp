@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <iostream>
 #include "colormod.h"
+#include <ncurses.h>
 using namespace std;
 
     unsigned char asciipic_txt[] = {
@@ -32,7 +33,7 @@ using namespace std;
 };
 unsigned int asciipic_txt_len = 246;
 // declared funtions 
-void mem(); void text(); void commands(); void test();
+void mem(); void text(); void ui(); void test(); 
 
 //main funtion
 int main()
@@ -58,18 +59,16 @@ void text()
         Color::Modifier green(Color::FG_GREEN);
     Color::Modifier def(Color::FG_DEFAULT);
      cout<< green <<"Welcome to Super_C\n"<<def << endl;
-      commands();
+      ui();
 
 
 
     }
-void commands()
-{
-std::ostringstream oss;
-    oss << "sometext" << test << "sometext" << endl;
-    std::string var = oss.str();
+void ui()
+    {
 
-}
+    }
+
 
 void test()
 {
