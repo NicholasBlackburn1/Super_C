@@ -61,6 +61,8 @@ void text()
      cout<< green <<"Welcome to Super_C\n"<<def << endl;
       cout<< "[1] = htop\n";
          cout<< "[2] = brew\n";
+         cout<< "[3] = reboot\n";
+         cout<< "[4] = poweroff\n";
       ui();
 
 
@@ -79,14 +81,10 @@ void ui()
                system("brew");
                break;
           case '3':
-             
+               system("reboot");
                break;
           case '4':
-               system("cls");
-               cout << "Option 4 code goes here \n";
-               cout << endl;
-               system("pause");
-               system("cls");
+               system("poweroff");
                break;
     }
 }
